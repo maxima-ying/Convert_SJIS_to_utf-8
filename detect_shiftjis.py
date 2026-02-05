@@ -173,7 +173,7 @@ def main(argv: Optional[list[str]] = None) -> int:
         
         # if 'MacRoman' in result:
         #     print(f"{path:<80} {result:<20} {conf:6.2f}")
-        print(f"{path:<80} {result:<20} {conf:6.2f}")
+        #print(f"{path:<80} {result:<20} {conf:6.2f}")
         
         action = ''
         if do_convert and ('Shift_JIS' in result or 'MacRoman' in result or 'Windows-1252' in result):

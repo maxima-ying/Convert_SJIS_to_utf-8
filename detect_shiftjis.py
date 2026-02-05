@@ -171,8 +171,11 @@ def main(argv: Optional[list[str]] = None) -> int:
         # print("path:", path)
         # print("result:", result)
         
+        # if 'MacRoman' in result:
+        #     print(f"{path:<80} {result:<20} {conf:6.2f}")
+        
         action = ''
-        if do_convert and 'Shift_JIS' in result:
+        if do_convert and ('Shift_JIS' in result or 'MacRoman' in result):
             ok, msg = backup_and_convert_to_utf8(path, root=root if backup_dir else None, backup_root=backup_dir, src_encoding='shift_jis')
             action = msg if ok else f'ERROR: {msg}'
             print(f"{path:<80} {result:<20} {conf:6.2f} {action:<40}")
